@@ -2,22 +2,16 @@ pipeline {
     agent any
 
     tools {
-        nodejs "node-18"   // 👈 matches the NodeJS tool you configured in Jenkins
+        nodejs "node-18"   // matches the NodeJS tool you configured in Jenkins
     }
 
     environment {
         BROWSERSTACK_USERNAME = credentials('BROWSERSTACK_USERNAME')
         BROWSERSTACK_ACCESS_KEY = credentials('BROWSERSTACK_ACCESS_KEY')
-        BROWSERSTACK_APP_ID = credentials('BROWSERSTACK_APP_ID')  // static app id from Jenkins credentials
+        BROWSERSTACK_APP_ID = credentials('BROWSERSTACK_APP_ID') 
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/your-org/your-repo.git'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
