@@ -1,2 +1,18 @@
-node_modules
+# Dependencies
+node_modules/
+
+# Logs
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
 .env
+
+# OS files
+.DS_Store
+
+# Appium artifacts
+*.apk
+*.ipa
