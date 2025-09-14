@@ -9,8 +9,6 @@
     "@wdio/mocha-framework": "^9.19.2",
     "@wdio/spec-reporter": "^9.19.2",
     "appium": "^2.19.0",
-    "appium-uiautomator2-driver": "^4.2.9",
-    "appium-xcuitest-driver": "^5.16.1",
     "webdriverio": "^9.19.1"
   },
   "scripts": {

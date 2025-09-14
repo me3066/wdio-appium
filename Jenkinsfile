@@ -11,6 +11,10 @@ pipeline {
         BROWSERSTACK_APP_ID = credentials('BROWSERSTACK_APP_ID') 
     }
 
+    triggers {
+        cron('H 2 * * *')   // Run once every night around 2AM
+    }
+
     stages {
         stage('Install Dependencies') {
             steps {
