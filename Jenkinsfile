@@ -12,7 +12,11 @@ pipeline {
     }
 
     triggers {
-        cron('H 2 * * *')   // Run once every night around 2AM
+        //cron('H 2 * * *')   // Run once every night around 2AM
+        triggers {
+        cron('H/5 * * * *')
+}
+
     }
 
     stages {
